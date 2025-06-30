@@ -4,8 +4,8 @@ import './App.css';
 function App() {
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [minSafety, setMinSafety] = useState(0);
-  const [maxRent, setMaxRent] = useState(100000);
+  const [minSafety, setMinSafety] = useState('');
+  const [maxRent, setMaxRent] = useState('');
 
   // Load data from backend once when component mounts
   const baseUrl = process.env.REACT_APP_API_BASE_URL || 'https://neighborfit-y283.onrender.com';
