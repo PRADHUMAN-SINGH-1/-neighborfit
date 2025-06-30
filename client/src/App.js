@@ -8,6 +8,7 @@ function App() {
   const [maxRent, setMaxRent] = useState(100000);
 
   // Load data from backend once when component mounts
+  const baseUrl = process.env.REACT_APP_API_BASE_URL || 'https://neighborfit-y283.onrender.com';
   useEffect(() => {
   fetch(`${baseUrl}/api/neighborhoods`)
     .then(res => res.json())
