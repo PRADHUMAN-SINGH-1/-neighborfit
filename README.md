@@ -1,7 +1,7 @@
 # 🏙️ NeighborhoodFit
 
 **🔗 Live Demo:** [https://neighborhoodfit.netlify.app](https://neighborhoodfit.netlify.app)  
-**🌐 Backend API:** [https://neighborhoodfit-backend.onrender.com/api/neighborhoods](https://neighborhoodfit-backend.onrender.com/api/neighborhoods)
+**🌐 Backend API:** [https://neighborhoodfit-backend.onrender.com/api/neighborhoods](https://neighborfit-y283.onrender.com/api/neighborhoods)
 
 NeighborhoodFit is a full-stack web application that helps users explore the best neighborhoods in **Bengaluru, India** based on safety, rent level, metro access, and lifestyle indicators.
 
