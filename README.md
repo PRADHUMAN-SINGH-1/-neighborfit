@@ -61,18 +61,64 @@ It also includes **smart badges** like “Safe”, “Metro Nearby”, and “Hi
 
 ---
 
-## 🧪 How It Works (Behind the Scenes)
+## ⚙️ How the backend works
 
-- When the app loads, the backend reads a `.csv` file containing data about each neighborhood.
-- The frontend fetches this data using a REST API (`/api/neighborhoods`).
-- The user can filter and explore this information through a friendly UI.
-- Each card displays lifestyle info and optionally shows a map location.
+- Server created with **Node.js + Express**
+- Data is parsed from CSV using `csv-parser`
+- Public API endpoint:
+  ```
+  https://neighborhoodfit-backend.onrender.com/api/neighborhoods
+  ```
+
+📦 **Deployed via Render:**  
+- Auto-deploy connected to GitHub repo  
+- Backend URL is set in `.env` as:
+  ```
+  REACT_APP_API_BASE_URL=https://neighborhoodfit-backend.onrender.com
+  ```
 
 ---
 
-## 🖥️ How to Run It Locally
+## 🌐 How frontend connects
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/PRADHUMAN-SINGH-1/-neighborfit.git
-   cd neighborfit
+React fetches data on page load using `useEffect()`:
+
+```js
+useEffect(() => {
+  fetch(`${process.env.REACT_APP_API_BASE_URL}/api/neighborhoods`)
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(err => console.error(err));
+}, []);
+```
+
+Frontend is hosted on **Netlify**, with:
+- `npm run build`
+- Publish directory: `client/build`
+- Env variable added under **Site Settings → Environment → Variables**
+
+---
+
+
+## 👤 Author
+
+Made by [Pradhuman Singh](https://github.com/PRADHUMAN-SINGH-1)  
+This project is built with 💙 as a demonstration of:
+- Real-world data acquisition
+- Full-stack deployment
+- Functional React + REST API integration
+- Clean UI/UX thinking
+
+---
+
+## 📌 Notes
+
+This app highlights my ability to:
+- Work with **real geo-data**
+- Set up both frontend and backend pipelines
+- Deploy full-stack apps using **zero budget** hosting services
+- Debug, refactor, and deploy under time constraints
+
+Feel free to explore the [live site](https://neighborhoodfit.netlify.app) or backend [API](https://neighborhoodfit-backend.onrender.com/api/neighborhoods).
+
+---
