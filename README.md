@@ -1,67 +1,42 @@
-# 🏙️ NeighborhoodFit
+# 🏡 NeighborFit
 
-🔴**Important Note Website uses free backend Render support . So, waiting Time of 1 minute is there for data fetching in live Website.
-
-**🔗 Live Demo:** [https://neighborhoodfit.netlify.app](https://neighborhoodfit.netlify.app)  
-**🌐 Backend API:** [https://neighborfit-y283.onrender.com/api/neighborhoods](https://neighborfit-y283.onrender.com/api/neighborhoods)
-
-NeighborhoodFit is a full-stack web application that helps users explore the best neighborhoods in **Bengaluru, India** based on safety, rent level, metro access, and lifestyle indicators.
+NeighborFit is your smart companion to explore neighborhoods in **Bengaluru** — one of India’s busiest and most vibrant cities. Whether you're moving in, relocating within the city, or just curious about different areas, this app helps you make an **informed lifestyle decision**.
 
 ---
 
-## 📡 What does it do?
+##  What is NeighborFit?
 
-Whether you're moving to Bengaluru or just exploring better areas to live in, **NeighborhoodFit** lets you:
+NeighborFit is a web app that shows detailed information about various Bengaluru neighborhoods. It uses a simple and clean interface to display:
 
-- 📍 View safety scores of neighborhoods  
-- 💰 Check average rent levels  
-- 🚇 Filter areas by metro station proximity  
-- 🌱 Know about nearby parks, schools, and lifestyle factors  
-- 🔍 Search and filter neighborhoods easily
+- 📊 **Safety scores**
+- 🏠 **Average rent**
+- 🚇 **Proximity to metro stations**
+- 🌳 **Nearby parks**
+- 🏫 **Nearby schools**
+- 📍 **Google Maps location**
 
----
-
-## 📊 Where did the data come from?
-
-The data behind this app was **not random** — I carefully created it using real sources!
-
-### 📥 CSV Data Source:
-- **Tool Used:** [Overpass Turbo](https://overpass-turbo.eu/)  
-- **Base Map:** [OpenStreetMap](https://www.openstreetmap.org)  
-- I used Overpass queries to extract geo and place data for Bengaluru’s neighborhoods, including:
-  - Neighborhood names (`place=neighbourhood`)
-  - Location coordinates
-  - Proximity to metro stations
-  - Parks and schools nearby
-
-Then, I manually enriched it with:
-- Safety scores (based on public crime index zones)
-- Rent levels (from 99acres and MagicBricks trends)
-- Labels like "High Safety", "Affordable", "Metro Nearby"
-
-🗂️ Final dataset: `neighborhood_data.csv`  
-This is stored on the server and served via an API.
+It also includes **smart badges** like “Safe”, “Metro Nearby”, and “High Rent” to help you quickly identify key aspects of each neighborhood.
 
 ---
 
-## 🖥️ Project Structure
+## 🔍 Key Features
 
-```
-NeighborFit/
-├── client/
-│   ├── public/
-│   └── src/
-│       ├── App.js                  # Main React component that sets up the UI and handles state
-│       ├── App.css                 # Styling for App.js
-│       ├── NeighborhoodList.js    # Component to display filtered list of neighborhoods
-│       └── NeighborhoodList.css   # Styling for NeighborhoodList.js
-├── server/
-│   ├── data/
-│   │   └── bengaluru_neighborhoods.csv   # Real dataset containing neighborhood info including population
-│   └── index.js                   # Express server that serves the API endpoints
-└── README.md                     # Project documentation including setup, features, and deployment
+- **🔎 Real-time filtering**  
+  Search neighborhoods by name, or filter based on:
+  - Maximum rent
+  - Minimum safety score
 
-```
+- **🏷️ Smart tags (badges)**  
+  Visual labels help you spot:
+  - Safe neighborhoods
+  - Ones close to the metro
+  - High-rent zones
+
+- **📍 Google Maps integration**  
+  View any neighborhood directly on the map with one click.
+
+- **🖤 Dark mode UI**  
+  Clean, modern, and comfortable for browsing at night.
 
 ---
 
@@ -86,66 +61,18 @@ NeighborFit/
 
 ---
 
-## ⚙️ How the backend works
+## 🧪 How It Works (Behind the Scenes)
 
-- Server created with **Node.js + Express**
-- Data is parsed from CSV using `csv-parser`
-- Public API endpoint:
-  ```
-  https://neighborhoodfit-backend.onrender.com/api/neighborhoods
-  ```
-
-📦 **Deployed via Render:**  
-- Auto-deploy connected to GitHub repo  
-- Backend URL is set in `.env` as:
-  ```
-  REACT_APP_API_BASE_URL=https://neighborhoodfit-backend.onrender.com
-  ```
+- When the app loads, the backend reads a `.csv` file containing data about each neighborhood.
+- The frontend fetches this data using a REST API (`/api/neighborhoods`).
+- The user can filter and explore this information through a friendly UI.
+- Each card displays lifestyle info and optionally shows a map location.
 
 ---
 
-## 🌐 How frontend connects
+## 🖥️ How to Run It Locally
 
-React fetches data on page load using `useEffect()`:
-
-```js
-useEffect(() => {
-  fetch(`${process.env.REACT_APP_API_BASE_URL}/api/neighborhoods`)
-    .then(res => res.json())
-    .then(data => setData(data))
-    .catch(err => console.error(err));
-}, []);
-```
-
-Frontend is hosted on **Netlify**, with:
-- `npm run build`
-- Publish directory: `client/build`
-- Env variable added under **Site Settings → Environment → Variables**
-
----
-
-
-
-## 👤 Author
-
-Made by [Pradhuman Singh](https://github.com/PRADHUMAN-SINGH-1)  
-This project is built with 💙 as a demonstration of:
-- Real-world data acquisition
-- Full-stack deployment
-- Functional React + REST API integration
-- Clean UI/UX thinking
-
----
-
-## 📌 Notes for Reviewers / HR
-
-This app highlights my ability to:
-- Work with **real geo-data**
-- 1 minute waiting Time for data to appear on Live Website
-- Set up both frontend and backend pipelines
-- Deploy full-stack apps using **zero budget** hosting services
-- Debug, refactor, and deploy under time constraints
-
-Feel free to explore the [live site](https://neighborhoodfit.netlify.app) or backend [API](https://neighborhoodfit-backend.onrender.com/api/neighborhoods).
-
----
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/PRADHUMAN-SINGH-1/-neighborfit.git
+   cd neighborfit
