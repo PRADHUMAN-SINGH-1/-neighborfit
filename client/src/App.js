@@ -9,11 +9,12 @@ function App() {
 
   // Load data from backend once when component mounts
   useEffect(() => {
-    fetch('http://localhost:5050/api/neighborhoods')
-      .then(res => res.json())
-      .then(data => setData(data))
-      .catch(err => console.error(err));
-  }, []);
+  fetch(`${baseUrl}/api/neighborhoods`)
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(err => console.error(err));
+}, [baseUrl]); 
+
 
   // Filter neighborhoods by search + filters
   const filteredData = data.filter(item => {
