@@ -81,10 +81,10 @@ function App() {
              {item.lifestyle_tags.map((tag, index) => {
                // Tag-based class logic
               let tagClass = '';
-                if (tag.includes('Family')) tagClass = 'family';
-                else if (tag.includes('Working')) tagClass = 'professional';
-                else if (tag.includes('Quiet')) tagClass = 'quiet';
-                else if (tag.includes('Walkable')) tagClass = 'walkable';
+              if (tag.includes("Family")) className += " family";
+              else if (tag.includes("Working")) className += " professional";
+              else if (tag.includes("Quiet")) className += " quiet";
+              else if (tag.includes("Walkable")) className += " walkable";
 
                 return (
                 <span key={index} className={`badge lifestyle ${tagClass}`}>
