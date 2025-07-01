@@ -61,11 +61,11 @@ function getDemoSchools(name) {
 function generateLifestyleTags(neighborhood) {
   const tags = [];
 
-  const schools = parseInt(neighborhood.schools_nearby);
-  const parks = parseInt(neighborhood.parks_nearby);
-  const metro = parseFloat(neighborhood.metro_nearby_km);
-  const safety = parseFloat(neighborhood.safety_score);
-  const rent = parseInt(neighborhood.avg_rent);
+  const schools = parseInt(neighborhood.schools_nearby) || 0;
+  const parks = parseInt(neighborhood.parks_nearby) || 0;
+  const metro = parseFloat(neighborhood.metro_nearby_km) || 100;
+  const safety = parseFloat(neighborhood.safety_score) || 0;
+  const rent = parseInt(neighborhood.avg_rent) || 0;
 
   if (schools >= 3 && parks >= 2) {
     tags.push("👨‍👩‍👧‍👦 Family-Friendly");
@@ -82,6 +82,7 @@ function generateLifestyleTags(neighborhood) {
 
   return tags;
 }
+
 
 app.listen(PORT, () => {
   console.log(`✈️ Server running on http://localhost:${PORT}`);
