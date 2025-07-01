@@ -75,7 +75,7 @@ function NeighborhoodList() {
               {parseFloat(n.safety_score) > 7 && <span className="badge safe">Safe</span>}
               {parseFloat(n.metro_nearby_km) < 2 && <span className="badge metro">Metro Nearby</span>}
               {parseInt(n.avg_rent) > 50000 && <span className="badge rent">High Rent</span>}
-
+             </div>
               {/* Lifestyle Tags */}
               <div className="lifestyle-tags">
               {n.lifestyle_tags && n.lifestyle_tags.map((tag, idx) => {
