@@ -66,6 +66,8 @@ function NeighborhoodList() {
             <p><strong>Metro Nearby:</strong> {n.metro_nearby_km || 'N/A'} km</p>
             <p><strong>Schools:</strong> {n.schools_nearby || 'N/A'}</p>
             <p><strong>Parks:</strong> {n.parks_nearby || 'N/A'}</p>
+            <p><strong>Population:</strong> {n.population || 'N/A'}</p>
+
 
             {/* Smart tags */}
             <div className="tags">
