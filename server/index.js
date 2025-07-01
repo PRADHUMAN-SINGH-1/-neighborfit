@@ -19,7 +19,7 @@ app.get('/api/neighborhoods', (req, res) => {
       neighborhoods.push({
         name: row.name,
         ward: row['@id'] || row.ward || '',
-        population: row.population || '12,500',
+        population: row.population || 'N/A',
         safety_score: row.safety_score || 'N/A',
         avg_rent: row.avg_rent || 'N/A',
         metro_nearby_km: row.metro_nearby_km || 'N/A',
