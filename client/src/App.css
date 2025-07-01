@@ -92,26 +92,6 @@ h1 {
   background-color: #f44336;
 }
 
-/* lifestyle badges */
-
-.badge.lifestyle.family {
-  background-color: #8bc34a; /* Green */
-}
-
-.badge.lifestyle.affordable {
-  background-color: #4caf50; /* Dark Green */
-}
-
-.badge.lifestyle.urban {
-  background-color: #03a9f4; /* Light Blue */
-}
-
-.badge.lifestyle.premium {
-  background-color: #ff5722; /* Deep Orange */
-}
-
-
-
 /* Map link */
 .map-link {
   display: inline-block;
