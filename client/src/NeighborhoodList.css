@@ -62,31 +62,45 @@
 .badge {
   display: inline-block;
   padding: 4px 10px;
-  margin-right: 5px;
-  border-radius: 12px;
-  font-size: 0.75rem;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 4px 4px 0 0;
   color: white;
+  font-weight: bold;
 }
 
+/* Safe Badge - Green */
 .badge.safe {
-  background-color: #4caf50;
+  background-color: #4CAF50;
 }
 
+/* Metro Nearby - Blue */
 .badge.metro {
-  background-color: #2196f3;
+  background-color: #2196F3;
 }
 
+/* High Rent - Red */
 .badge.rent {
   background-color: #f44336;
 }
 
-.map-link {
-  display: inline-block;
-  margin-top: 10px;
-  color: #00e0ff;
-  text-decoration: underline;
-  font-size: 0.9rem;
+/* Smart Lifestyle Tags */
+.badge.family {
+  background-color: #ff9800;
 }
+
+.badge.professionals {
+  background-color: #673ab7;
+}
+
+.badge.quiet {
+  background-color: #607d8b;
+}
+
+.badge.walkable {
+  background-color: #009688;
+}
+
 .lifestyle-tags {
   margin-top: 8px;
 }
@@ -101,3 +115,12 @@
   margin: 4px 4px 0 0;
   border: 1px solid #c5e1a5;
 }
+
+.map-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00e0ff;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+

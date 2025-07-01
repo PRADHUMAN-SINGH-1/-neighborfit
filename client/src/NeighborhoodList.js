@@ -68,20 +68,24 @@ function NeighborhoodList() {
             <p><strong>Parks:</strong> {n.parks_nearby || 'N/A'}</p>
             <p><strong>Population:</strong> {n.population || 'N/A'}</p>
 
-             {/* Lifestyle Tags */}
-            {n.lifestyle_tags && n.lifestyle_tags.length > 0 && (
-            <div className="lifestyle-tags">
-            {n.lifestyle_tags.map((tag, idx) => (
-            <span key={idx} className="lifestyle-badge">{tag}</span>
-             ))}
-            </div>
-             )}
+             
 
             {/* Smart tags */}
             <div className="tags">
               {parseFloat(n.safety_score) > 7 && <span className="badge safe">Safe</span>}
               {parseFloat(n.metro_nearby_km) < 2 && <span className="badge metro">Metro Nearby</span>}
               {parseInt(n.avg_rent) > 50000 && <span className="badge rent">High Rent</span>}
+
+              {/* Lifestyle Tags */}
+              {n.lifestyle_tags && n.lifestyle_tags.map((tag, i) => {
+               let className = 'badge ';
+              if (tag.includes("Family")) className += 'family';
+              else if (tag.includes("Professionals")) className += 'professionals';
+              else if (tag.includes("Quiet")) className += 'quiet';
+              else if (tag.includes("Walkable")) className += 'walkable';
+
+              return <span key={i} className={className}>{tag}</span>;
+              })}
             </div>
 
             {/* Google Map link */}
