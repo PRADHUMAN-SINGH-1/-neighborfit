@@ -77,16 +77,23 @@ function NeighborhoodList() {
               {parseInt(n.avg_rent) > 50000 && <span className="badge rent">High Rent</span>}
 
               {/* Lifestyle Tags */}
-              {n.lifestyle_tags && n.lifestyle_tags.map((tag, i) => {
-               let className = 'badge ';
-              if (tag.includes("Family")) className += 'family';
-              else if (tag.includes("Professionals")) className += 'professionals';
-              else if (tag.includes("Quiet")) className += 'quiet';
-              else if (tag.includes("Walkable")) className += 'walkable';
+              <div className="lifestyle-tags">
+              {n.lifestyle_tags && n.lifestyle_tags.map((tag, idx) => {
+                let className = 'lifestyle-badge';
 
-              return <span key={i} className={className}>{tag}</span>;
-              })}
+              if (tag.includes('Family')) className += ' family';
+              else if (tag.includes('Professionals')) className += ' professionals';
+              else if (tag.includes('Quiet')) className += ' quiet';
+              else if (tag.includes('Walkable')) className += ' walkable';
+
+              return (
+              <span key={idx} className={className}>
+                {tag}
+              </span>
+               );
+               })}
             </div>
+
 
             {/* Google Map link */}
             {n.lat && n.lon && (

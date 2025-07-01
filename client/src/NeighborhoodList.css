@@ -85,21 +85,6 @@
 }
 
 /* Smart Lifestyle Tags */
-.badge.family {
-  background-color: #ff9800;
-}
-
-.badge.professionals {
-  background-color: #673ab7;
-}
-
-.badge.quiet {
-  background-color: #607d8b;
-}
-
-.badge.walkable {
-  background-color: #009688;
-}
 
 .lifestyle-tags {
   margin-top: 8px;
@@ -115,6 +100,31 @@
   margin: 4px 4px 0 0;
   border: 1px solid #c5e1a5;
 }
+
+.lifestyle-badge.family {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+}
+
+.lifestyle-badge.professionals {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+}
+
+.lifestyle-badge.quiet {
+  background-color: #607d8b;
+  color: white;
+  border: none;
+}
+
+.lifestyle-badge.walkable {
+  background-color: #009688;
+  color: white;
+  border: none;
+}
+
 
 .map-link {
   display: inline-block;
