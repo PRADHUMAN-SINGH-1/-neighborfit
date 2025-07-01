@@ -76,24 +76,25 @@ function App() {
               {parseInt(item.avg_rent) > 50000 && <span className="badge rent">High Rent</span>}
             </div>
 
-              {item.lifestyle_tags && (
-             <div className="lifestyle-tags">
+            {item.lifestyle_tags && (
+            <div className="lifestyle-tags">
              {item.lifestyle_tags.map((tag, index) => {
-               // Tag-based class logic
-              let tagClass = "badge lifestyle";
-              if (tag.includes("Family")) className += " family";
-              else if (tag.includes("Working")) className += " professional";
-              else if (tag.includes("Quiet")) className += " quiet";
-              else if (tag.includes("Walkable")) className += " walkable";
+              // Tag-based class logic
+               let tagClass = "badge lifestyle";
+               if (tag.includes("Family")) tagClass += " family";
+               else if (tag.includes("Working")) tagClass += " professional";
+               else if (tag.includes("Quiet")) tagClass += " quiet";
+               else if (tag.includes("Walkable")) tagClass += " walkable";
 
-                return (
-                <span key={index} className={`badge lifestyle ${tagClass}`}>
-                {tag}
-                </span>
-                );
-                 })}
-                </div>
-                )}
+               return (
+              <span key={index} className={tagClass}>
+               {tag}
+             </span>
+             );
+             })}
+            </div>
+             )}
+
 
 
 
