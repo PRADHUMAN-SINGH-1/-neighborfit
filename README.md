@@ -183,6 +183,6 @@ This app highlights my ability to:
 - Deploy full-stack apps using **zero budget** hosting services
 - Debug, refactor, and deploy under time constraints
 
-Feel free to explore the [live site](https://neighborhoodfit.netlify.app) or backend [API](https://neighborhoodfit-backend.onrender.com/api/neighborhoods).
+Feel free to explore the [live site](https://neighborhoodfit.netlify.app) or backend [API](https://neighborfit-y283.onrender.com/api/neighborhoods).
 
 ---
