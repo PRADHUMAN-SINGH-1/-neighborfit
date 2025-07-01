@@ -61,7 +61,9 @@ function App() {
           <div key={idx} className="card">
             <h2>{item.name}</h2>
             <p><strong>Ward:</strong> {item.ward}</p>
-            <p><strong>Population:</strong> {item.population || 'N/A'}</p>
+            {item.population && item.population !== 'N/A' && (
+            <p><strong>Population:</strong> {item.population}</p>
+             )}
             <p><strong>Safety Score:</strong> {item.safety_score}</p>
             <p><strong>Avg. Rent:</strong> ₹{item.avg_rent}</p>
             <p><strong>Metro Nearby:</strong> {item.metro_nearby_km} km</p>
