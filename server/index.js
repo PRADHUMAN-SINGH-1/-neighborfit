@@ -23,7 +23,6 @@ app.get('/api/neighborhoods', (req, res) => {
         avg_rent: row.avg_rent || 'N/A',
         metro_nearby_km: row.metro_nearby_km || 'N/A',
         parks_nearby: row.parks_nearby || getDemoParks(row.name),
-        population: 'N/A',
         schools_nearby: row.schools_nearby || getDemoSchools(row.name),
         lat: row.lat || null,
         lon: row.lon || null
