@@ -92,6 +92,22 @@ h1 {
   background-color: #f44336;
 }
 
+
+.lifestyle-tags {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.badge.lifestyle {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
 /* Map link */
 .map-link {
   display: inline-block;

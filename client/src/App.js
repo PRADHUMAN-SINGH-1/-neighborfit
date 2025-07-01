@@ -76,6 +76,16 @@ function App() {
               {parseInt(item.avg_rent) > 50000 && <span className="badge rent">High Rent</span>}
             </div>
 
+            {/* Lifestyle Tags */}
+            {item.lifestyle_tags && (
+            <div className="lifestyle-tags">
+              {item.lifestyle_tags.map((tag, index) => (
+              <span key={index} className="badge lifestyle">{tag}</span>
+              ))}
+             </div>
+              )}
+
+
             {/* Google Maps Link */}
             {item.lat && item.lon && (
               <a
