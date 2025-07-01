@@ -1,7 +1,9 @@
 # 🏙️ NeighborhoodFit
 
+🔴**Important Note Website uses free backend Render support . So, waiting Time of 1 minute is there for data fetching in live Website.
+
 **🔗 Live Demo:** [https://neighborhoodfit.netlify.app](https://neighborhoodfit.netlify.app)  
-**🌐 Backend API:** [https://neighborhoodfit-backend.onrender.com/api/neighborhoods](https://neighborfit-y283.onrender.com/api/neighborhoods)
+**🌐 Backend API:** [https://neighborfit-y283.onrender.com/api/neighborhoods](https://neighborfit-y283.onrender.com/api/neighborhoods)
 
 NeighborhoodFit is a full-stack web application that helps users explore the best neighborhoods in **Bengaluru, India** based on safety, rent level, metro access, and lifestyle indicators.
 
@@ -46,14 +48,19 @@ This is stored on the server and served via an API.
 
 ```
 NeighborFit/
-├── client/                # React frontend
-│   ├── src/
-│   │   ├── App.js         # App logic with fetch call to backend
-│   │   ├── components/    # Card, Search, Filters
-│   │   └── styles/        # Tailwind + CSS
-├── server/                # Node.js + Express backend
-│   ├── neighborhood_data.csv
-│   └── index.js           # REST API serving CSV
+├── client/
+│   ├── public/
+│   └── src/
+│       ├── App.js                  # Main React component that sets up the UI and handles state
+│       ├── App.css                 # Styling for App.js
+│       ├── NeighborhoodList.js    # Component to display filtered list of neighborhoods
+│       └── NeighborhoodList.css   # Styling for NeighborhoodList.js
+├── server/
+│   ├── data/
+│   │   └── bengaluru_neighborhoods.csv   # Real dataset containing neighborhood info including population
+│   └── index.js                   # Express server that serves the API endpoints
+└── README.md                     # Project documentation including setup, features, and deployment
+
 ```
 
 ---
@@ -134,6 +141,7 @@ This project is built with 💙 as a demonstration of:
 
 This app highlights my ability to:
 - Work with **real geo-data**
+- 1 minute waiting Time for data to appear on Live Website
 - Set up both frontend and backend pipelines
 - Deploy full-stack apps using **zero budget** hosting services
 - Debug, refactor, and deploy under time constraints
