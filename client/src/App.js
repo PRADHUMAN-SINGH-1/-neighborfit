@@ -76,14 +76,25 @@ function App() {
               {parseInt(item.avg_rent) > 50000 && <span className="badge rent">High Rent</span>}
             </div>
 
-            {/* Lifestyle Tags */}
-            {item.lifestyle_tags && (
-            <div className="lifestyle-tags">
-              {item.lifestyle_tags.map((tag, index) => (
-              <span key={index} className="badge lifestyle">{tag}</span>
-              ))}
-             </div>
-              )}
+              {item.lifestyle_tags && (
+             <div className="lifestyle-tags">
+             {item.lifestyle_tags.map((tag, index) => {
+               // Tag-based class logic
+              let tagClass = '';
+                if (tag.includes('Family')) tagClass = 'family';
+                else if (tag.includes('Working')) tagClass = 'professional';
+                else if (tag.includes('Quiet')) tagClass = 'quiet';
+                else if (tag.includes('Walkable')) tagClass = 'walkable';
+
+                return (
+                <span key={index} className={`badge lifestyle ${tagClass}`}>
+                {tag}
+                </span>
+                );
+                 })}
+                </div>
+                )}
+
 
 
             {/* Google Maps Link */}

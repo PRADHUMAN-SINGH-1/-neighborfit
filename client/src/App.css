@@ -93,20 +93,30 @@ h1 {
 }
 
 
-.lifestyle-tags {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+/* More colorful lifestyle badges */
+.badge.lifestyle {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
 }
 
-.badge.lifestyle {
-  background-color: #e0f7fa;
-  color: #00796b;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
+/* Specific lifestyle colors */
+.badge.lifestyle.family {
+  background-color: #4caf50; /* Green */
 }
+.badge.lifestyle.professional {
+  background-color: #2196f3; /* Blue */
+}
+.badge.lifestyle.quiet {
+  background-color: #9c27b0; /* Purple */
+}
+.badge.lifestyle.walkable {
+  background-color: #ff9800; /* Orange */
+}
+
 
 /* Map link */
 .map-link {
