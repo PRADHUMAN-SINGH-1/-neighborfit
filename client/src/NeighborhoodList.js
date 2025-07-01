@@ -68,6 +68,14 @@ function NeighborhoodList() {
             <p><strong>Parks:</strong> {n.parks_nearby || 'N/A'}</p>
             <p><strong>Population:</strong> {n.population || 'N/A'}</p>
 
+             {/* Lifestyle Tags */}
+            {n.lifestyle_tags && n.lifestyle_tags.length > 0 && (
+            <div className="lifestyle-tags">
+            {n.lifestyle_tags.map((tag, idx) => (
+            <span key={idx} className="lifestyle-badge">{tag}</span>
+             ))}
+            </div>
+             )}
 
             {/* Smart tags */}
             <div className="tags">

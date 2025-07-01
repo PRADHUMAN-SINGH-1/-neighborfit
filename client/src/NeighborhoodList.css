@@ -87,3 +87,17 @@
   text-decoration: underline;
   font-size: 0.9rem;
 }
+.lifestyle-tags {
+  margin-top: 8px;
+}
+
+.lifestyle-badge {
+  background-color: #f1f8e9;
+  color: #33691e;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 4px 4px 0 0;
+  border: 1px solid #c5e1a5;
+}
